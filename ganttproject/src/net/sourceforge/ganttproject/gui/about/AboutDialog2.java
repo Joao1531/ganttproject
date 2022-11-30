@@ -23,10 +23,7 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Set;
+import java.util.*;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
@@ -79,7 +76,7 @@ public class AboutDialog2 extends AbstractPagesDialog {
     }
     result.add(htmlBox, BorderLayout.NORTH);
 
-    JLabel icon = new JLabel(new ImageIcon(AboutDialog2.class.getResource("/icons/ganttproject.png")));
+    JLabel icon = new JLabel(new ImageIcon(Objects.requireNonNull(AboutDialog2.class.getResource("/icons/ganttproject.png"))));
     icon.setAlignmentX(0.5f);
     JPanel iconWrapper = new JPanel(new BorderLayout());
     iconWrapper.add(icon, BorderLayout.NORTH);
