@@ -133,7 +133,6 @@ class TaskTreeImageGenerator {
     state.indent = TextLengthCalculatorImpl.getTextLength(g, "mmmm");
     for (Iterator<DefaultMutableTreeNode> tasks = taskNodes.iterator(); tasks.hasNext();) {
       DefaultMutableTreeNode nextTreeNode = tasks.next();
-
       boolean blankline = nextTreeNode instanceof BlankLineNode;
       Task next = null;
       if (!blankline) {

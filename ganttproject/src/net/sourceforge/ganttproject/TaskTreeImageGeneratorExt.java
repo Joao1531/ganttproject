@@ -65,6 +65,7 @@ public class TaskTreeImageGeneratorExt extends TaskTreeImageGenerator {
 
   @Override
   protected void paintTask(Graphics g, PaintState state, Task t) {
+
     final TextLengthCalculatorImpl lengthCalculator = new TextLengthCalculatorImpl((Graphics2D) g);
     // The list of column object which are currently being used or referenced
     // to by the code

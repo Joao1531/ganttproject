@@ -241,4 +241,6 @@ public interface TaskManager {
   ProjectEventListener getProjectListener();
 
   GPCalendarListener getCalendarListener();
+
+  TaskNode filterTaskNode(TaskNode root);
 }

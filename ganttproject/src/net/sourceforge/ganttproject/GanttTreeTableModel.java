@@ -117,7 +117,7 @@ public class GanttTreeTableModel extends DefaultTreeTableModel implements TableC
    */
   public GanttTreeTableModel(
       TaskManager taskManager, CustomPropertyManager customColumnsManager, UIFacade uiFacade, Runnable dirtyfier) {
-    super(new TaskNode(taskManager.getRootTask()));
+    super(taskManager.filterTaskNode(new TaskNode(taskManager.getRootTask())));
     TaskDefaultColumn.BEGIN_DATE.setIsEditablePredicate(NOT_SUPERTASK);
     TaskDefaultColumn.BEGIN_DATE.setSortComparator(new BeginDateComparator());
     TaskDefaultColumn.END_DATE.setIsEditablePredicate(Predicates.and(NOT_SUPERTASK, NOT_MILESTONE));
@@ -375,67 +375,66 @@ public class GanttTreeTableModel extends DefaultTreeTableModel implements TableC
     assert node instanceof TaskNode : "Tree node=" + node + " is not a task node";
 
     final Task task = (Task) ((TaskNode)node).getUserObject();
-    TaskDefaultColumn property = TaskDefaultColumn.values()[column];
-    switch (property) {
-    case NAME:
-      ((TaskNode) node).setName(value.toString());
-      break;
-    case BEGIN_DATE:
-      ((TaskNode) node).setStart((GanttCalendar) value);
-      ((TaskNode) node).applyThirdDateConstraint();
-      break;
-    case END_DATE:
-      ((TaskNode) node).setEnd(CalendarFactory.createGanttCalendar(
-          GPTimeUnitStack.DAY.adjustRight(((GanttCalendar)value).getTime())));
-      break;
-    case DURATION:
-      TimeDuration tl = task.getDuration();
-      ((TaskNode) node).setDuration(task.getManager().createLength(tl.getTimeUnit(), ((Integer) value).intValue()));
-      break;
-    case COMPLETION:
-      ((TaskNode) node).setCompletionPercentage(((Integer) value).intValue());
-      break;
-    case PREDECESSORS:
-      //List<Integer> newIds = Lists.newArrayList();
-      List<String> specs = Lists.newArrayList();
-      for (String s : String.valueOf(value).split(",")) {
-        if (!s.trim().isEmpty()) {
-          specs.add(s.trim());
-        }
-      }
-      Map<Integer, Supplier<TaskDependency>> promises;
-      try {
-         promises = TaskProperties.parseDependencies(
-            specs, task, new Function<Integer, Task>() {
-              @Override
-              public Task apply(@Nullable Integer id) {
-                return task.getManager().getTask(id);
-              }
-            });
-        TaskManager taskManager = task.getManager();
-        taskManager.getAlgorithmCollection().getScheduler().setEnabled(false);
-        task.getDependenciesAsDependant().clear();
-        for (Supplier<TaskDependency> promise : promises.values()) {
-          promise.get();
-        }
-        taskManager.getAlgorithmCollection().getScheduler().setEnabled(true);
-      } catch (IllegalArgumentException | TaskDependencyException e) {
-        throw new ValidationException(e);
-      }
-      break;
-    case COST:
-      try {
-        BigDecimal cost = new BigDecimal(String.valueOf(value));
-        task.getCost().setCalculated(false);
-        task.getCost().setValue(cost);
-      } catch (NumberFormatException e) {
-        throw new ValidationException(MessageFormat.format("Can't parse {0} as number", value));
-      }
-      break;
-    default:
-      break;
+      TaskDefaultColumn property = TaskDefaultColumn.values()[column];
+      switch (property) {
+        case NAME:
+          ((TaskNode) node).setName(value.toString());
+          break;
+        case BEGIN_DATE:
+          ((TaskNode) node).setStart((GanttCalendar) value);
+          ((TaskNode) node).applyThirdDateConstraint();
+          break;
+        case END_DATE:
+          ((TaskNode) node).setEnd(CalendarFactory.createGanttCalendar(
+                  GPTimeUnitStack.DAY.adjustRight(((GanttCalendar) value).getTime())));
+          break;
+        case DURATION:
+          TimeDuration tl = task.getDuration();
+          ((TaskNode) node).setDuration(task.getManager().createLength(tl.getTimeUnit(), ((Integer) value).intValue()));
+          break;
+        case COMPLETION:
+          ((TaskNode) node).setCompletionPercentage(((Integer) value).intValue());
+          break;
+        case PREDECESSORS:
+          //List<Integer> newIds = Lists.newArrayList();
+          List<String> specs = Lists.newArrayList();
+          for (String s : String.valueOf(value).split(",")) {
+            if (!s.trim().isEmpty()) {
+              specs.add(s.trim());
+            }
+          }
+          Map<Integer, Supplier<TaskDependency>> promises;
+          try {
+            promises = TaskProperties.parseDependencies(
+                    specs, task, new Function<Integer, Task>() {
+                      @Override
+                      public Task apply(@Nullable Integer id) {
+                        return task.getManager().getTask(id);
+                      }
+                    });
+            TaskManager taskManager = task.getManager();
+            taskManager.getAlgorithmCollection().getScheduler().setEnabled(false);
+            task.getDependenciesAsDependant().clear();
+            for (Supplier<TaskDependency> promise : promises.values()) {
+              promise.get();
+            }
+            taskManager.getAlgorithmCollection().getScheduler().setEnabled(true);
+          } catch (IllegalArgumentException | TaskDependencyException e) {
+            throw new ValidationException(e);
+          }
+          break;
+        case COST:
+          try {
+            BigDecimal cost = new BigDecimal(String.valueOf(value));
+            task.getCost().setCalculated(false);
+            task.getCost().setValue(cost);
+          } catch (NumberFormatException e) {
+            throw new ValidationException(MessageFormat.format("Can't parse {0} as number", value));
+          }
+          break;
+        default:
+          break;
     }
-
   }
 
   private void setCustomPropertyValue(Object value, Object node, int column) {

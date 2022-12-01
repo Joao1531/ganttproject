@@ -30,6 +30,7 @@ import net.sourceforge.ganttproject.TestSetupHelper;
 import net.sourceforge.ganttproject.task.Task;
 import net.sourceforge.ganttproject.task.TaskManager;
 
+
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
