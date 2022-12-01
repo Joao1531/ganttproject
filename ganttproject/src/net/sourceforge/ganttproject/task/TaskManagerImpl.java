@@ -88,6 +88,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.Set;
 
 /**
  * @author bard
@@ -1267,5 +1268,14 @@ public class TaskManagerImpl implements TaskManager {
   @Override
   public TaskNode filterTaskNode(TaskNode root){
     return myTaskFilter.getFilteredTasksAsNode(root);
+  }
+  @Override
+  public Set<Task> getHiddenTasks(Set<Task> tasks){
+    return myTaskFilter.getNotFiltredTasks(tasks,Arrays.asList(getTasks()));
+  }
+
+  @Override
+  public List<Task> filterTaskList(List<Task> tasks){
+    return  myTaskFilter.getFilteredTasks(tasks);
   }
 }

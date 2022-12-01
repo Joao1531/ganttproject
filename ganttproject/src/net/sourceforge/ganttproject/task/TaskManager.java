@@ -37,9 +37,11 @@ import net.sourceforge.ganttproject.task.algorithm.DependencyGraph;
 import net.sourceforge.ganttproject.task.dependency.TaskDependencyCollection;
 import net.sourceforge.ganttproject.task.dependency.TaskDependencyConstraint;
 import net.sourceforge.ganttproject.task.event.TaskListener;
+import java.util.Set;
 
 import java.awt.*;
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Date;
 import java.util.Map;
 
@@ -243,4 +245,8 @@ public interface TaskManager {
   GPCalendarListener getCalendarListener();
 
   TaskNode filterTaskNode(TaskNode root);
+
+  Set<Task> getHiddenTasks(Set<Task> tasks);
+
+  List<Task> filterTaskList(List<Task> tasks);
 }

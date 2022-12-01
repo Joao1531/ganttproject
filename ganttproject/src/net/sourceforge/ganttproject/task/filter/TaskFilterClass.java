@@ -10,6 +10,8 @@ package net.sourceforge.ganttproject.task.filter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.Iterator;
 import net.sourceforge.ganttproject.task.Task;
 import net.sourceforge.ganttproject.task.TaskNode;
 
@@ -66,6 +68,17 @@ public class TaskFilterClass implements TaskFilter{
             System.out.println("Node nao retirado: " + currTask.getName());
         }
 
+    }
+
+    public Set<Task> getNotFiltredTasks(Set<Task> hTasks,List<Task> tasks){
+        Iterator<Task> it = tasks.iterator();
+        while(it.hasNext()){
+            Task t = it.next();
+            if(!isValid(t)&& !hTasks.contains(t)){
+                hTasks.add(t);
+            }
+        }
+        return hTasks;
     }
 
 

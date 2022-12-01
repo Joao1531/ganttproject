@@ -78,12 +78,11 @@ public class ChartModelImpl extends ChartModelBase {
 
   @Override
   public void setVisibleTasks(List<Task> visibleTasks) {
-   // TaskFilter tf = new TaskFilterClass();
-    myVisibleTasks = visibleTasks;
+    myVisibleTasks = taskManager.filterTaskList(visibleTasks);
   }
 
   public void setExplicitlyHiddenTasks(Set<Task> hiddenTasks) {
-    myHiddenTasks = hiddenTasks;
+    myHiddenTasks = taskManager.getHiddenTasks(hiddenTasks);
   }
 
   @Override

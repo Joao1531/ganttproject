@@ -561,9 +561,8 @@ public class GanttTree2 extends TreeTableContainer<Task, GanttTreeTable, GanttTr
   }
 
   public List<Task> getVisibleNodes(VisibleNodesFilter visibleNodesFilter) {
-    TaskFilter tf = new TaskFilterClass();
-    return tf.getFilteredTasks(visibleNodesFilter.getVisibleNodes(getJTree(), getTreeTable().getVerticalScrollBar().getValue(),
-        getHeight(), getTreeTable().getRowHeight()));
+    return visibleNodesFilter.getVisibleNodes(getJTree(), getTreeTable().getVerticalScrollBar().getValue(),
+        getHeight(), getTreeTable().getRowHeight());
   }
 
   @Override
