@@ -1,0 +1,10 @@
+Review 1 - David Moreira
+O Code Smell identificado foi bem observado. É boa ética de programação tratar de limpar o código antigo após atualizar o mesmo de modo a este ser de fácil compreensão e não se tornar confuso.
+
+Review 2 - José Romano
+O code smell foi exposto de forma interativa e muito clara dando assim uma prespetiva bem realista da dimensão do problema.
+
+Review 3 - João Lopes
+O code smell apresentado foi muito bem observado. Desde o início do curso de Engenharia Informática somos avisados e aconselhados
+a fazer métodos relativamente curtos, de maneira a ser mais fácil de ler e obter um melhor suporte, algo que não ocorre neste 
+exemplo.

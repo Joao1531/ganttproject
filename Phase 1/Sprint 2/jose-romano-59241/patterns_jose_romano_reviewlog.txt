@@ -1,0 +1,11 @@
+Review 1 - David Moreira
+O Design Pattern foi bem identificado, porque realmente essas classes servem para atuar como comandos, eludindo ao Command design pattern; apesar da imagem selecionada não ter sido a melhor pois não mostra em concreto o armazenamento das linhas de código a correr remotamente dentro das classes definidas
+
+
+Review 2 - Sofia Monteiro
+O Pattern foi bem definido. Apesar de a imagem utilizada como exemplo não ser a melhor, mostra bastante bem o que se quer provar.
+
+
+Review 3 - João Lopes
+Tal como o nome indica, o padrão iterador permite que elemento se movimentem de forma transversal de maneira a não expor também a 
+representação de código presente em maior profundidade , como listas. Desta forma, o padrão encontra-se bem observado.

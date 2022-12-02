@@ -1,0 +1,8 @@
+Review 1 - José Romano
+Concordo plenamente com a review uma vez que é boa prática comentar o código para este ser perceptível quer para o próprio programador, quer para outros que leiam o código mais tarde.
+
+Review 2 - Sofia Monteiro
+Em relação ao code smell, este está corretamente identificado e a solução dada parece-me adequada, uma vez que também facilita a leitura do código.
+
+Review 3 - David Moreira
+O code smell foi corretamente identificado e é uma boa prática de programação limpar extras no códigos, para facilitar a compreensão e leitura do código 

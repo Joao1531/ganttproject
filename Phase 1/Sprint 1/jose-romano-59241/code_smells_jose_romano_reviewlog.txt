@@ -1,0 +1,9 @@
+Review 1 - Sofia Monteiro
+A formatação do documento torna-o um pouco dificil de ler, mas o code smell está corretamente identificado, com uma solução fácil, eficaz e adaptável.
+
+Review 2 - David Moreira
+O code smell apontado é, do meu ponto de vista bem apontado, apesar de que a formatação e organização do ficheiro não tornem a leitura do mesmo muito clara. Recomendava que tornasse mais fácil a leitura do documento.
+
+Review 3 - Joana Maroco
+A identificação do code smell, a meu ver, está correta; um comentário do programador a reconhecer as próprias falhas é, também, um mau indicador no código.
+Gostaria apenas que o exemplo fosse mais visual.

@@ -1,0 +1,9 @@
+Review 1 - José Romano
+Pattern bem identificado, o print poderia apenas conter a estrutura inicial da interface no formato  "public interface TaskContainmentHierarchyFacade{(...)}" de modo a ser mais direto naquilo que quer demonstrar. A definição do próprio pattern está bem explicada não tendo assim mais nada a apontar.
+
+Review 2 - David Moreira
+O Design Pattern foi bem identificado pois realmente esse é o objetivos dessas classes, apesar da imagem selecionada não ter sido a melhor pois não mostra em concreto o armazenamento das linhas de código a correr remotamente dentro das classes definidas, ainda assim muito bem identificado
+
+Review 3 - Joana Maroco
+A justificação referente ao cliente não necessitar de ter em conta as classes dos objetos com os quais trabalha faz-me lembrar outro structural patteen.
+Contudo, foi bem observado a questão da estrutura da árvore (tree) e respetivas folhas (leafs) incluindo apresentadas, portanto concordo.

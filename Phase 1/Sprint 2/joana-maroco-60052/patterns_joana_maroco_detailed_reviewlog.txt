@@ -1,0 +1,11 @@
+Review 1 - Sofia Monteiro
+O pattern está bem apresentado, com uma linguagem simples e eficaz.
+A forma como conecta a definição de Memento Pattern e o que acontece
+no código não deixa qualquer dúvidas de que está correto.
+
+Review 2 -José Romano
+O pattern está bem apresentado, a definição tem a linguagem apropriada e simples de compreender, o 
+print é que podia conter apenas aquilo que nos é importante reter em vez da janela toda (ou quase).
+
+Review 3 - David Moreira
+O pattern foi bem identificado, de uma maneira clara e concisa, com um bom exemplo para o demonstrar.

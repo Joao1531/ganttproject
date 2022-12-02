@@ -1,0 +1,9 @@
+Review 1 - João Lopes
+O code smell parece ser válido e é bastante preciso. Aborda muito bem a inconsistência do uso de comentários, usados de maneira errada.
+
+Review 2 - Joana Maroco
+Eu concordo com o meu colega, demasiados comentários foi apontado como um code smell claro nas aulas teóricas. Uma pessoa passa mais tempo
+a raciocinar com o comentário do que propriamente a entender o código e melhorá-lo em si (caso necessário).
+
+Review 3 - Sofia Monteiro
+O code smell parece-me correto e os exemplos dados demonstram bem, mas preferia ter uma imagem das classes que referes.

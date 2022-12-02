@@ -1,0 +1,11 @@
+Review 1 - Joana Maroco
+Na minha opinião, a obervação feita é correta. Apresenta um ponto que não é visível tão facilmente, mas que é muito bem observado.
+Um enumerado auxilia esta função referenciada de atribuir diversos valores constantes a um mesmo Objeto. Sendo, ainda por cima, 21 valores,
+este seria um recurso que daria bem mais valor ao código do programador.
+
+Review 2 - João Lopes 
+O code smell representado parece-me estar certo, apresentando um problema muito recorrente em programação, a repetição desnecessária 
+de condições, pelo que pode ser otimizado através de um Switch, tal como a Sofia, e bem, apontou.
+
+Review 3 - José Romano
+Observação muito bem apontada, podia ter exemplificado com um print da classe vazia em questão mas, de resto, problema do dead code foi muito bem elucidado.

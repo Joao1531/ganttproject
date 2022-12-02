@@ -1,0 +1,9 @@
+Review 1 - Joao Lopes
+O padrão apresentado parece-me ser válido, respeita o princípio que existe apenas uma instância da classe, obedecendo assim ao
+Singleton Pattern.
+=======
+Review 2 - Joana Maroco
+Gosto da forma como explica o pattern no seu âmbito geral antes de indicar o exemplo ou a forma como o indicou. Consequentemente, concordo e gosto da justificação.
+=======
+Review 3 - José Romano
+Este pattern está muito bem explicado e apresentado. Utiliza uma liguagem científica o suficiente mas simples, gosto da forma como faz a transição da definição para a explicação no código concretamente e o print possuí apenas aquilo que nos é importante ver e saber.

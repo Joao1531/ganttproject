@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+Review 1 - Joana Maroco
+Na minha opinião, a argumentação está muito bem colocada para o pattern, respetivamente, bem observado.
+=======
+
+
+Review 2 - João Lopes
+O padrão apresentado está bem apontado: Tal como a definição indica, na interface CalendarFactory é possivel observar que cada
+produto implementa também classes específicas.
+>>>>>>> 919f4b4bae905de0979d54807af83d2499aabb4f
+
+Review 3 - Sofia Monteiro
+O padrão foi bem apresentado e explicado, pelo que não deixa qualquer duvida de que está correto. O exemplo foi bem escolhido e localizado.
