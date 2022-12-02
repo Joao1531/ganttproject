@@ -25,8 +25,6 @@ import net.sourceforge.ganttproject.task.Task;
 import net.sourceforge.ganttproject.task.TaskActivity;
 import net.sourceforge.ganttproject.task.TaskContainmentHierarchyFacade;
 import net.sourceforge.ganttproject.task.TaskManager;
-import net.sourceforge.ganttproject.task.filter.TaskFilter;
-import net.sourceforge.ganttproject.task.filter.TaskFilterClass;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -78,11 +76,11 @@ public class ChartModelImpl extends ChartModelBase {
 
   @Override
   public void setVisibleTasks(List<Task> visibleTasks) {
-    myVisibleTasks = taskManager.filterTaskList(visibleTasks);
+    myVisibleTasks = visibleTasks;
   }
 
   public void setExplicitlyHiddenTasks(Set<Task> hiddenTasks) {
-    myHiddenTasks = taskManager.getHiddenTasks(hiddenTasks);
+    myHiddenTasks = hiddenTasks;
   }
 
   @Override

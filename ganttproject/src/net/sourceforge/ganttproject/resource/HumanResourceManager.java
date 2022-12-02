@@ -25,6 +25,10 @@ import net.sourceforge.ganttproject.roles.Role;
 import net.sourceforge.ganttproject.roles.RoleManager;
 import net.sourceforge.ganttproject.undo.GPUndoManager;
 
+import net.sourceforge.ganttproject.resource.filter.HumanResourceFilter;
+import net.sourceforge.ganttproject.resource.filter.HumanResourceFilterImpl;
+
+
 import java.io.OutputStream;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -85,6 +89,7 @@ public class HumanResourceManager {
     public abstract HumanResource build();
   }
 
+  private HumanResourceFilter resourceFilter = new HumanResourceFilterImpl();
   private List<ResourceView> myViews = new ArrayList<ResourceView>();
 
   private List<HumanResource> resources = new ArrayList<HumanResource>();
@@ -297,5 +302,13 @@ public class HumanResourceManager {
       result = null;
     }
     return result;
+  }
+
+  public List<HumanResource> filterHRList(List<HumanResource> resources){
+    return resourceFilter.filterHumanResourceList(resources);
+  }
+
+  public boolean isHRFiltered(HumanResource hr){
+    return resourceFilter.isValid(hr);
   }
 }

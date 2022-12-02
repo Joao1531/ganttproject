@@ -71,9 +71,6 @@ import net.sourceforge.ganttproject.task.event.TaskScheduleEvent;
 import net.sourceforge.ganttproject.task.hierarchy.TaskHierarchyManagerImpl;
 import net.sourceforge.ganttproject.util.collect.Pair;
 
-import net.sourceforge.ganttproject.task.filter.TaskFilter;
-import net.sourceforge.ganttproject.task.filter.TaskFilterClass;
-
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -94,7 +91,6 @@ import java.util.Set;
  * @author bard
  */
 public class TaskManagerImpl implements TaskManager {
-  private final TaskFilter myTaskFilter = new TaskFilterClass();
   private static final GPCalendarCalc RESTLESS_CALENDAR = new AlwaysWorkingTimeCalendarImpl();
 
   private final TaskHierarchyManagerImpl myHierarchyManager;
@@ -1265,17 +1261,4 @@ public class TaskManagerImpl implements TaskManager {
     return myDependencyGraph;
   }
 
-  @Override
-  public TaskNode filterTaskNode(TaskNode root){
-    return myTaskFilter.getFilteredTasksAsNode(root);
-  }
-  @Override
-  public Set<Task> getHiddenTasks(Set<Task> tasks){
-    return myTaskFilter.getNotFiltredTasks(tasks,Arrays.asList(getTasks()));
-  }
-
-  @Override
-  public List<Task> filterTaskList(List<Task> tasks){
-    return  myTaskFilter.getFilteredTasks(tasks);
-  }
 }

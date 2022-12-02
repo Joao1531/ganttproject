@@ -26,6 +26,7 @@ import org.jdesktop.swingx.treetable.MutableTreeTableNode;
 
 import net.sourceforge.ganttproject.TreeUtil;
 import net.sourceforge.ganttproject.task.Task;
+import net.sourceforge.ganttproject.task.TaskImpl;
 
 /**
  * Created by IntelliJ IDEA. User: bard
@@ -40,8 +41,9 @@ public class VisibleNodesFilter {
       if (false == nextNode.getUserObject() instanceof Task) {
         continue;
       }
+      Task toAdd = (Task) nextNode.getUserObject();
       if ((currentHeight + nodeHeight) > minHeight && jtree.isVisible(TreeUtil.createPath(nextNode))) {
-        result.add((Task) nextNode.getUserObject());
+          result.add((Task) nextNode.getUserObject());
       }
       if (jtree.isVisible(TreeUtil.createPath(nextNode))) {
         currentHeight += nodeHeight;

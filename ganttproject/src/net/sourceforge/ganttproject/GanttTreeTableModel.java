@@ -117,7 +117,7 @@ public class GanttTreeTableModel extends DefaultTreeTableModel implements TableC
    */
   public GanttTreeTableModel(
       TaskManager taskManager, CustomPropertyManager customColumnsManager, UIFacade uiFacade, Runnable dirtyfier) {
-    super(taskManager.filterTaskNode(new TaskNode(taskManager.getRootTask())));
+    super(new TaskNode(taskManager.getRootTask()));
     TaskDefaultColumn.BEGIN_DATE.setIsEditablePredicate(NOT_SUPERTASK);
     TaskDefaultColumn.BEGIN_DATE.setSortComparator(new BeginDateComparator());
     TaskDefaultColumn.END_DATE.setIsEditablePredicate(Predicates.and(NOT_SUPERTASK, NOT_MILESTONE));

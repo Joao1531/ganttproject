@@ -110,7 +110,7 @@ public class ResourceTreeTableModel extends DefaultTreeTableModel {
   private DefaultMutableTreeTableNode buildTree() {
 
     DefaultMutableTreeTableNode root = new DefaultMutableTreeTableNode();
-    List<HumanResource> listResources = myResourceManager.getResources();
+    List<HumanResource> listResources = myResourceManager.filterHRList(myResourceManager.getResources());
     Iterator<HumanResource> itRes = listResources.iterator();
 
     while (itRes.hasNext()) {
@@ -122,7 +122,8 @@ public class ResourceTreeTableModel extends DefaultTreeTableModel {
   }
 
   public void updateResources() {
-    HumanResource[] listResources = myResourceManager.getResourcesArray();
+    List<HumanResource> lr = myResourceManager.filterHRList(myResourceManager.getResources());
+    HumanResource[] listResources = lr.toArray(new HumanResource[lr.size()]);
 
     for (int idxResource = 0; idxResource < listResources.length; idxResource++) {
       HumanResource hr = listResources[idxResource];
@@ -170,9 +171,9 @@ public class ResourceTreeTableModel extends DefaultTreeTableModel {
 
   public DefaultMutableTreeTableNode addResource(HumanResource people) {
     DefaultMutableTreeTableNode result = new ResourceNode(people);
-    insertNodeInto(result, root, root.getChildCount());
-    myResourceManager.toString();
-    return result;
+      insertNodeInto(result, root, root.getChildCount());
+      myResourceManager.toString();
+      return result;
   }
 
   public void deleteResources(HumanResource[] peoples) {

@@ -142,7 +142,7 @@ public class ChartModelResource extends ChartModelBase {
   // }
 
   public HumanResource[] getVisibleResources() {
-    return myManager.getResources().toArray(new HumanResource[0]);
+    return myManager.filterHRList(myManager.getResources()).toArray(new HumanResource[0]);
   }
 
   @Override

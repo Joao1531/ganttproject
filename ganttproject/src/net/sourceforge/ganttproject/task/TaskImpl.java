@@ -157,6 +157,7 @@ public class TaskImpl implements Task {
     customValues = new CustomColumnsValues(myManager.getCustomPropertyManager());
   }
 
+
   protected TaskImpl(TaskManagerImpl manager, TaskImpl copy, boolean isUnplugged) {
     this.isUnplugged = isUnplugged;
     myManager = manager;

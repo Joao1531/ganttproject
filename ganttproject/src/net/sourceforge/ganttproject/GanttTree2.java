@@ -47,8 +47,6 @@ import org.jdesktop.swingx.treetable.DefaultMutableTreeTableNode;
 import org.jdesktop.swingx.treetable.MutableTreeTableNode;
 import org.jdesktop.swingx.treetable.TreeTableNode;
 
-import net.sourceforge.ganttproject.task.filter.TaskFilter;
-import net.sourceforge.ganttproject.task.filter.TaskFilterClass;
 
 import javax.swing.*;
 import javax.swing.Timer;

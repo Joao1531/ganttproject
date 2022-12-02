@@ -47,8 +47,6 @@ import net.sourceforge.ganttproject.task.*;
 import net.sourceforge.ganttproject.task.dependency.TaskDependency;
 import net.sourceforge.ganttproject.task.dependency.TaskDependencyConstraint;
 
-import net.sourceforge.ganttproject.task.filter.TaskFilter;
-import net.sourceforge.ganttproject.task.filter.TaskFilterClass;
 
 import javax.annotation.Nullable;
 import java.awt.*;

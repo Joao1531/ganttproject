@@ -244,9 +244,4 @@ public interface TaskManager {
 
   GPCalendarListener getCalendarListener();
 
-  TaskNode filterTaskNode(TaskNode root);
-
-  Set<Task> getHiddenTasks(Set<Task> tasks);
-
-  List<Task> filterTaskList(List<Task> tasks);
 }
