@@ -1,1 +1,1 @@
-# Phase1_Presentations_and_Reviews
+Second and last phase of the project
