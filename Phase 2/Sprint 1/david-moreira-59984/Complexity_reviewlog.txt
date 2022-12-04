@@ -1,0 +1,5 @@
+Review:
+
+A origem do conjunto de métricas não é muito bem apresentado, mas o resto encontra-se
+bem explicado. Se fosse alguém que não teria conhecimento destas métricas, ficaria a
+conhecer bem o essencial sobre elas.  Joao Lopes 60055
