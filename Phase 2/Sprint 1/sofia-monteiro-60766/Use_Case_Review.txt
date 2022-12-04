@@ -1,0 +1,1 @@
+Parece-me bem implementado este use case, e, pelo que percebi do código, funciona exatamente desta forma.
