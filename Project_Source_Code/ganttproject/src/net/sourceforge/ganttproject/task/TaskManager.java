@@ -87,6 +87,12 @@ public interface TaskManager {
       return this;
     }
 
+/**public TaskBuilder withAlert(Date endDate) {
+      myAlert = new AlertImpl(endDate);
+      return this;
+    }*/ 
+    
+
     public TaskBuilder withExpansionState(boolean isExpanded) {
       this.isExpanded = isExpanded;
       return this;

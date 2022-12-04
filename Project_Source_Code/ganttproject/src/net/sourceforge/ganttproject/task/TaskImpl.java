@@ -45,6 +45,8 @@ import net.sourceforge.ganttproject.task.dependency.TaskDependencySliceAsDepende
 import net.sourceforge.ganttproject.task.dependency.TaskDependencySliceImpl;
 import net.sourceforge.ganttproject.task.hierarchy.TaskHierarchyItem;
 import net.sourceforge.ganttproject.util.collect.Pair;
+import net.sourceforge.ganttproject.task.alerts.*;
+
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 
@@ -75,6 +77,8 @@ public class TaskImpl implements Task {
   private final TaskManagerImpl myManager;
 
   private String myName;
+
+  //private Alert myAlert;
 
   private String myWebLink = "";
 
@@ -178,6 +182,7 @@ public class TaskImpl implements Task {
     myPriority = copy.myPriority;
     myStart = copy.myStart;
     myEnd = copy.myEnd;
+    //myAlert = new AlertImpl(myEnd);
     myThird = copy.myThird;
     myThirdDateConstraint = copy.myThirdDateConstraint;
     myCompletionPercentage = copy.myCompletionPercentage;
@@ -248,6 +253,9 @@ public class TaskImpl implements Task {
   public String getName() {
     return myName;
   }
+
+  /**@Override
+  public Alert getAlert() {return myAlert;} */
 
   public String getWebLink() {
     return myWebLink;

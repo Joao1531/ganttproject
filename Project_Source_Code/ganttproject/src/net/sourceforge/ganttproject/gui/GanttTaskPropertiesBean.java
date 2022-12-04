@@ -194,6 +194,15 @@ public class GanttTaskPropertiesBean extends JPanel {
     constructEarliestBegin(propertiesPanel);
     addEmptyRow(propertiesPanel);
 
+    /** for further implementation
+    propertiesPanel.add(new JLabel("Quantos dias toca o alarme antes?"));
+    numField1 = new JTextField(20);
+    numField1.setName("num");
+    propertiesPanel.add(numField1);
+
+    addEmptyRow(propertiesPanel);
+*/
+
     propertiesPanel.add(new JLabel(language.getText("priority")));
     priorityComboBox = new JComboBox();
     for (Task.Priority p : Task.Priority.values()) {
