@@ -13,7 +13,7 @@ Considering that java util Date uses miliseconds, when we create an alert, we wa
 1 day before the "end day" of the task
  */
     public AlertImpl(Date endDateOftask) {
-        this.warningDate = new Date (endDateOftask - ONE_DAY_IN_MILISECONDS);
+        //this.warningDate = new Date (endDateOftask - ONE_DAY_IN_MILISECONDS);
     }
 
     /**
