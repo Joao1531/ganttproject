@@ -1,0 +1,1 @@
+Inicialmente fiquei um pouco na dúvida porque, normalmente, não existe apenas uma Task selecionada, visto que o método das Selected Tasks afeta um array inteiro. Mas depois percebi que está escrito no singular. De resto, parece estar bem descrito e de acordo com o código.
