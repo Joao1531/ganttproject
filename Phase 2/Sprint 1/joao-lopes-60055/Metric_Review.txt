@@ -1,0 +1,3 @@
+O uso da palavra "acoplamento" não é comum, mas é compreensível, percebe-se o que se quer
+exprimir. Nos potenciais problemas não é bem explicado o que cada valor, mesmmo "errado"
+influencia, mas de resto está percetível e correto, na minha opinião.
