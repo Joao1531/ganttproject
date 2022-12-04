@@ -1,0 +1,3 @@
+O uso da palavra "acoplamento" não é comum, mas é compreensível, percebe-se o que se quer
+exprimir. O facto de inserirem uma tabela com os valores aconselhados e preferíveis para 
+cada métrica é um detalhe muito bom. Está muito bem apresentado.
