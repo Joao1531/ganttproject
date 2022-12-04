@@ -16,7 +16,7 @@ import net.sourceforge.ganttproject.resource.HumanResource;
 
 /**
  *This class filter Human Resources verifying if their name has
- *  the substring the user is looking for*
+ *  the substring the user is looking for
  */
 
 public class HumanResourceFilterImpl implements HumanResourceFilter{
@@ -44,6 +44,7 @@ public class HumanResourceFilterImpl implements HumanResourceFilter{
      * @param hrList list to be filtred
      * @return the filtered list
      */
+    @Override
     public List<HumanResource> filterHumanResourceList(List<HumanResource> hrList){
         List<HumanResource> resList = new ArrayList<HumanResource>();
         Iterator<HumanResource> it = hrList.iterator();
@@ -55,6 +56,16 @@ public class HumanResourceFilterImpl implements HumanResourceFilter{
             System.out.println(hr.getName());
         }
         return resList;
+    }
+
+    /**
+     * This method changes the used filter
+     *
+     * @param newFilter - the new filter
+     */
+    @Override
+    public void changeFilter(String newFilter){
+        this.toFilter = newFilter;
     }
 
 }
